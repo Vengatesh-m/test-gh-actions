@@ -33,9 +33,9 @@ jobs:
 
       - name: Push report to CSPM panel
         run: |
-          curl --location --request POST 'https://${{ env.endpoint }}/api/v1/artifact/?tenant_id=${{ env.tenant_id }}&data_type=ZAP&label_id=dasttest&save_to_s3=false' --header 'Tenant-Id: ${{ env.tenant_id }}' --header 'Authorization: Bearer ${{ env.token }}' --form 'file=@report.json'
+          curl --location --request POST 'https://${{ env.endpoint }}/api/v1/artifact/?tenant_id=${{ env.tenant_id }}&data_type=ZAP&label_id=zaptest&save_to_s3=false' --header 'Tenant-Id: ${{ env.tenant_id }}' --header 'Authorization: Bearer ${{ env.token }}' --form 'file=@report.json'
         env:
-          token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzNjUzMzczLCJqdGkiOiI4NjgxMWFiN2QyMjY0Y2U4YmFmNzY0Mzg3YTUzZTdjMSIsImlzcyI6ImNzcG0uc3RhZ2UuYWNjdWtub3guY29tIn0.M649_XWwAeC9udSQOIQV9f4yPGLfHwJn99JKRpvq5OP9Mxgb4PV_oyfsLf3HvpAaQpR7MCTwf5CT8MeU8q-SxFYqH-JBevnnHOsfwPGBPFemmYib7Q0JSempY5-eYTTFRlGKD0MuKY7kMk_HsScF_Bstdpd6ugyVAdHwY4WHOHzuK8Mn3nUJwcrD2Bzm2tgYBe38IX5DA3f2tvYCex2oWOl-xhNPUKG86Obrl4qpOAwjRMgvICdE43BffixPJLC4WUHYVkg6lwk6cx76dpK69w0VeA0CAa7HpdUZnchxZKqweM3G3gObOjnbPRnE03Ny7yk2E1cdqR8sylCq8f9g3w"
+          token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM4MzA4NjY3LCJqdGkiOiJjNWI5NTMzODM2ZGE0ZjVhODhkYjQ2MjhkZjkwOTQwZCIsImlzcyI6ImNzcG0uc3RhZ2UuYWNjdWtub3guY29tIn0.d2juxKrK6-D8B2IuXV2btQ_eOrKqjf6dGU4-oYK591_62hoIYG5azgDfMy_bbTk2B1SFUmg6fyUVQNnL8O8R4cL1uDe-TGcfa63dPZjoHOBk8K5swN_djepkrMZoB1ppDT-CIiBaEuClTaqQmL9N5C57epvkN7jawbft2WUVuhuE2B_3EwLOFhZKcqC6-jnJ91m9udYSzntpNneBhj5MoVd4mBOqLR05p_E9c2qTr21Ios-DhdGiZE783priya_glZtRYmeU_dg2_KtQN1Tmg_wXTlUc7-oOToPaoOtV1zfVtOu0i9CxvV8Lhg9VsmtN03bvWd0S3gyX1vD2letSLg"
           endpoint: "cspm.stage.accuknox.com"
-          tenant_id: "5088"
+          tenant_id: "4"
         working-directory: /tmp/zap
